@@ -42,7 +42,7 @@
 %global XENSERVER65 %(if (grep -qiE "XenServer.*6\.5" /etc/issue /etc/*release* 2>/dev/null); then echo -n '1'; else echo -n '0'; fi)
 %global RHEL8 %(if test `grep -E '^(ID="rhel"|VERSION="8)' /etc/os-release 2>/dev/null | wc -l` -eq 2; then echo -n '1'; else echo -n '0'; fi)
 
-%{!?KVERSION: %global KVERSION 4.4.0+10}
+%{!?KVERSION: %global KVERSION 4.19.0+1}
 %global kernel_version %{KVERSION}
 %global krelver %(echo -n %{KVERSION} | sed -e 's/-/_/g')
 # take path to kernel sources if provided, otherwise look in default location (for non KMP rpms).

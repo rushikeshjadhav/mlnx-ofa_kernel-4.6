@@ -10,7 +10,7 @@
 
 
 # take kernel version or default to uname -r
-%{!?KVERSION: %global KVERSION 4.4.0+10}
+%{!?KVERSION: %global KVERSION 4.19.0+1}
 %global kernel_version %{KVERSION}
 %global krelver %(echo -n %{KVERSION} | sed -e 's/-/_/g')
 # take path to kernel sources if provided, otherwise look in default location (for non KMP rpms).
